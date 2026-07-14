@@ -122,13 +122,13 @@ Power BI Dashboard (In Progress)
 
 ##  Project Status
 
-- ✅ Data Ingestion
-- ✅ SQLite Integration
-- ✅ Data Cleaning
-- ✅ Feature Engineering
-- ✅ Data Transformation
-- ✅ CSV Export
-- 🚧 Power BI Dashboard (In Progress)
+-  Data Ingestion
+-  SQLite Integration
+-  Data Cleaning
+-  Feature Engineering
+-  Data Transformation
+-  CSV Export
+-  Power BI Dashboard (In Progress)
 
 ---
 
