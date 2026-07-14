@@ -11,3 +11,60 @@
 2026-07-13 19:34:58,483 INFO Loading raw data
 2026-07-13 19:34:58,963 INFO Raw data loaded in 0.4801003932952881 seconds
 2026-07-13 19:34:58,964 INFO Data Loaded Successfully
+2026-07-14 17:28:51,707 INFO Loading raw data
+2026-07-14 17:28:53,048 INFO Raw data loaded in 1.340728759765625 seconds
+2026-07-14 17:28:53,048 INFO Data Loaded Successfully
+2026-07-14 17:29:07,471 INFO Loading raw data
+2026-07-14 17:29:08,171 INFO Raw data loaded in 0.7003505229949951 seconds
+2026-07-14 17:29:08,171 INFO Data Loaded Successfully
+2026-07-14 17:29:35,910 INFO Loading raw data
+2026-07-14 17:29:36,711 INFO Raw data loaded in 0.8004763126373291 seconds
+2026-07-14 17:29:36,711 INFO Data Loaded Successfully
+2026-07-14 17:47:11,604 INFO Loading raw data
+2026-07-14 17:47:12,432 INFO Raw data loaded in 0.8280348777770996 seconds
+2026-07-14 17:47:12,432 INFO Data Loaded Successfully
+2026-07-14 17:47:12,433 INFO Starting transformation pipeline for 'raw_marketing_data' -> 'transformed_marketing_data'
+2026-07-14 17:47:12,433 INFO 1. Extracting data from database...
+2026-07-14 17:47:12,433 ERROR Pipeline failed due to an error: Execution failed on sql 'SELECT * FROM raw_marketing_data': no such table: raw_marketing_data
+2026-07-14 17:47:12,434 INFO Database connection closed.
+2026-07-14 17:47:43,534 INFO Loading raw data
+2026-07-14 17:47:44,297 INFO Raw data loaded in 0.7620928287506104 seconds
+2026-07-14 17:47:44,297 INFO Data Loaded Successfully
+2026-07-14 17:47:44,297 INFO Starting transformation pipeline for 'marketing_campaign' -> 'transformed_marketing_data'
+2026-07-14 17:47:44,297 INFO 1. Extracting data from database...
+2026-07-14 17:47:44,298 ERROR Pipeline failed due to an error: Execution failed on sql 'SELECT * FROM marketing_campaign': no such table: marketing_campaign
+2026-07-14 17:47:44,298 INFO Database connection closed.
+2026-07-14 17:49:41,994 INFO Loading raw data
+2026-07-14 17:49:42,741 INFO Raw data loaded in 0.7472434043884277 seconds
+2026-07-14 17:49:42,741 INFO Data Loaded Successfully
+2026-07-14 17:49:42,742 INFO Starting transformation pipeline for 'marketing_campaign' -> 'transformed_marketing_data'
+2026-07-14 17:49:42,742 INFO 1. Extracting data from database...
+2026-07-14 17:49:42,780 INFO Successfully extracted 2240 rows.
+2026-07-14 17:49:42,780 INFO 2. Cleaning Data...
+2026-07-14 17:49:42,788 INFO Dropped 0 duplicate rows.
+2026-07-14 17:49:42,788 INFO 3. Feature Engineering & Calculating KPIs...
+2026-07-14 17:49:42,799 INFO 4. Removing Outliers...
+2026-07-14 17:49:42,807 INFO Removed 1032 rows containing outliers.
+2026-07-14 17:49:42,807 INFO 5. Categorical Encoding...
+2026-07-14 17:49:42,812 INFO 6. Loading 1208 transformed rows to database table 'transformed_marketing_data'...
+2026-07-14 17:49:42,838 INFO 7. Exporting data to CSV for visualization: 'marketing_dashboard_data.csv'...
+2026-07-14 17:49:42,864 INFO CSV export completed successfully.
+2026-07-14 17:49:42,864 INFO Pipeline execution completed successfully!
+2026-07-14 17:49:42,864 INFO Database connection closed.
+2026-07-14 18:10:55,009 INFO Loading raw data
+2026-07-14 18:10:55,887 INFO Raw data loaded in 0.8774034976959229 seconds
+2026-07-14 18:10:55,887 INFO Data Loaded Successfully
+2026-07-14 18:10:55,887 INFO Starting transformation pipeline for 'marketing_campaign' -> 'transformed_marketing_data'
+2026-07-14 18:10:55,887 INFO 1. Extracting data from database...
+2026-07-14 18:10:55,933 INFO Successfully extracted 2240 rows.
+2026-07-14 18:10:55,933 INFO 2. Cleaning Data...
+2026-07-14 18:10:55,944 INFO Dropped 0 duplicate rows.
+2026-07-14 18:10:55,945 INFO 3. Feature Engineering & Calculating KPIs...
+2026-07-14 18:10:55,952 INFO 4. Removing Outliers...
+2026-07-14 18:10:55,963 INFO Removed 1032 rows containing outliers.
+2026-07-14 18:10:55,963 INFO 5. Categorical Encoding...
+2026-07-14 18:10:55,966 INFO 6. Loading 1208 transformed rows to database table 'transformed_marketing_data'...
+2026-07-14 18:10:55,990 INFO 7. Exporting data to CSV for visualization: 'marketing_dashboard_data.csv'...
+2026-07-14 18:10:56,007 INFO CSV export completed successfully.
+2026-07-14 18:10:56,007 INFO Pipeline execution completed successfully!
+2026-07-14 18:10:56,007 INFO Database connection closed.
