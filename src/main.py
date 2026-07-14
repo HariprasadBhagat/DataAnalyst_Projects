@@ -8,7 +8,7 @@ def main():
     DATABASE_NAME = 'E:/Projects/Marketing_Campaign_Data_Analyst_Project/Database/market_data.db'
     RAW_TABLE = 'marketing_campaign'
     TRANSFORMED_TABLE = 'transformed_marketing_data'
-    FINAL_CSV_EXPORT = 'marketing_dashboard_data.csv'
+    FINAL_CSV_EXPORT = 'Updated_Dataset/marketing_dashboard_data.csv'
     
     print("========== MASTER PIPELINE STARTED ==========")
     
