@@ -61,28 +61,13 @@ def run_transformation_pipeline(db_name, input_table, output_table, output_csv_p
         lead_sources = ['NumWebPurchases', 'NumCatalogPurchases', 'NumStorePurchases']
         df['Max_Leads_Source'] = df[lead_sources].idxmax(axis=1)
         
-        logging.info("4. Removing Outliers...")
-      
-        numeric_cols = df.select_dtypes(include=[np.number])
-        Q1 = numeric_cols.quantile(0.25)
-        Q3 = numeric_cols.quantile(0.75)
-        IQR = Q3 - Q1
         
-     
-        outlier_mask = ((numeric_cols < (Q1 - 1.5 * IQR)) | (numeric_cols > (Q3 + 1.5 * IQR)))
-        pre_outlier_count = len(df)
-        df = df[~outlier_mask.any(axis=1)]
-        logging.info(f"Removed {pre_outlier_count - len(df)} rows containing outliers.")
         
-        logging.info("5. Categorical Encoding...")
-
-        df = pd.get_dummies(df, columns=['Education', 'Marital_Status'])
-        
-        logging.info(f"6. Loading {len(df)} transformed rows to database table '{output_table}'...")
+        logging.info(f"4. Loading {len(df)} transformed rows to database table '{output_table}'...")
 
         df.to_sql(output_table, conn, index=False, if_exists='replace')
         
-        logging.info(f"7. Exporting data to CSV for visualization: '{output_csv_path}'...")
+        logging.info(f"5. Exporting data to CSV for visualization: '{output_csv_path}'...")
   
         df.to_csv(output_csv_path, index=False)
         logging.info("CSV export completed successfully.")
@@ -91,7 +76,7 @@ def run_transformation_pipeline(db_name, input_table, output_table, output_csv_p
         return df
 
     except Exception as e:
-        # If anything fails, it will be logged as an error with the exact reason
+        
         logging.error(f"Pipeline failed due to an error: {str(e)}")
         raise
         
